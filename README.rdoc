@@ -1,6 +1,6 @@
 == README
 
-I'm a new programmer, learning through Careerfoundry.com. As far as I know right now, this app is just teaching me how git files work.my_cf_project_final
+I'm a new programmer, learning through Careerfoundry.com. As far as I know right now, this app is just teaching me how git files work.
 
 
 Please feel free to use a different markup language if you do not plan to run
