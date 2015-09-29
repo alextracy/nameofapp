@@ -1,27 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I'm a new programmer, learning through Careerfoundry.com. As far as I know right now, this app is just teaching me how git files work.
 
 
 Please feel free to use a different markup language if you do not plan to run
