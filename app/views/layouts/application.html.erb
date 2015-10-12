@@ -16,7 +16,7 @@
 	 	<div class="container-fluid">
 	 	
 	 		<div class="projectName">
-					 <a href="#">Ruby Project</a>
+					 <a href="../#">Ruby Project</a>
 		 	</div>
 		</div>
 	 	<div class="navbar-header" style="float:right">
@@ -28,7 +28,7 @@
 	 			</button>
 		 	<div class="navbar-collapse collapse" style="float:right">	
 			  		<ul class="nav navbar-nav">
-			  			<li><a href="../#">Home</a></l>
+			  			<li><a href="../static_pages/index">Home</a></l>
 			  			<li><a href="/products">Products</a></li>
 			  			<li><a href="../static_pages/about">About Us</a></li>
 			  			<li><a href="../static_pages/contact">Contact</a></li>
@@ -38,12 +38,11 @@
 		</div> <!-- end nav container --> 
   </nav> <!-- end navbar -->
 <div class="container">
-<h1>Welcome to Bike Berlin</h1>
-<h2 style="text-align: center;">Your source for used bikes in Berlin</h2>
-<div class="picture">
-<%= image_tag("racebike.jpg") %>
-</div>
-<%= yield %>
+	<h1>Welcome to Bike Berlin</h1>
+	<h2 style="text-align: center">Your source for used bikes in Berlin</h2>
+	<div style="margin-top: 10%">
+		<%= yield %>
+	</div>
 </div>
 <footer>
 	<p>&copy; Alex Tracy 2015</p>
