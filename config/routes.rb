@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :products
-  resources :object_names
   resources :orders, only: [:index, :show, :new, :create]
   get 'static_pages/about'
 
