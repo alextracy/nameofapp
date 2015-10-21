@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h1 {
 	font-family: arial;
-	color: blue;
+	color: black;
 	text-align: center;
 }
 .nav {
@@ -40,6 +40,10 @@ ul.nav a:hover {
 	color: black !important; 
 	background-color: #fff;
 	text-decoration: none;
+}
+.searchform {
+	display: inline-block;
+	width: 350px;
 }
 .picture {
 	margin-left: 20%;

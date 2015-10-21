@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Products</h1>
+
 <div class="table-responsive">
 <table class="table table-bordered">
   <thead>
@@ -12,12 +13,13 @@
       <th colspan="4"></th>
     </tr>
   </thead>
-
+ 
   <tbody>
       <%= render @products %>
   </tbody>
 </table>
 </div>
+
 <br>
 
 <%= link_to 'New Product', new_product_path %>
