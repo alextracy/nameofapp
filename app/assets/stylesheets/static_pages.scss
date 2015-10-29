@@ -23,6 +23,9 @@ h1 {
 ul.nav a:hover { 
 	color: black !important; 
 }
+.registration {
+	background-color: blue;
+}
 .projectName {
 	display: inline-block;
 	text-transform: uppercase;
@@ -45,9 +48,6 @@ ul.nav a:hover {
 	display: inline-block;
 	width: 350px;
 }
-.registration {
-	background-color: #9b59b6;
-}
 .picture {
 	margin-left: 20%;
 }
@@ -65,8 +65,13 @@ ul.nav a:hover {
 	margin-top: -1%;
 }
 .contactContainer {
-	margin-top: 5%;
-	width: 40%;
+	margin: -10% 20% 5% 20%;
+	padding: 2%;
+	border-radius: 1em;
+}
+.contactContainer2 {
+	width: 80%;
+	margin: 0% 10%;
 }
 .container {
 	width: 80%;
