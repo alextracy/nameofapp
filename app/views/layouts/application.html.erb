@@ -4,6 +4,7 @@
   <title>Ruby Project</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 <%= javascript_include_tag 'prototype' %>
 <%= javascript_include_tag 'application' %>
@@ -58,8 +59,12 @@
 		 	</div> <!-- end navbar-collapse collapse -->
 		</div> <!-- end nav container --> 
   </nav> <!-- end navbar -->
-  <p id="notice"><%= notice %></p>
+  <% if notice %>
+  <p id="notice" class="alert alert-info"><%= notice %></p>
+  <% end %>
+  <% if alert %>
   <p class="alert"><%= alert %></p>
+  <% end %>
 <div class="container">
 	<div style="margin-top: 10%">
 		<%= yield %>
