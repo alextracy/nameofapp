@@ -34,12 +34,12 @@
                 </div>
 
                 <div class="field">
-                  <p style="font-weight: bold">New <%= f.label :password %> <i>(leave blank if you don't want to change it)</i></p>
+                  <%= f.label :password, 'New password'%> <i>(leave blank if you don't want to change it)</i>
                   <%= f.password_field :password, autocomplete: "off", :placeholder => "New password", class: "form-control" %>
                 </div>
 
                 <div class="field">
-                  <%= f.label :password_confirmation %><br />
+                  <%= f.label :password_confirmation, 'Confirm new password' %><br />
                   <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => "Confirm new password", class: "form-control" %>
                 </div>
 
