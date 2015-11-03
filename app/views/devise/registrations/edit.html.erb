@@ -48,6 +48,10 @@
                 </div>
               <% end %>
 
-<p style="margin-top: 10%; margin-bottom: 5%; font-size: 1.2em; float:left">Unhappy? <%= button_to "Cancel my account", registration_path(resource_name),:class=>'btn btn-md btn-primary', :style => "background-color: black; color: #fff; margin-top: 8.5%; margin-left: 5%", data: { confirm: "Are you sure?" }, method: :delete %></p>
+               <p class="unhappy">Unhappy? <%= button_to "Cancel my account", registration_path(resource_name),:class=>'btn btn-md btn-primary cancel', data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back, style: "font-size: 1.3em; marign-top: 5%" %>
+              <p class="back"><%= link_to "Back", :back%></p>
+          </div>
+      </div>
+    </div>
+  </div>

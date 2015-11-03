@@ -48,6 +48,26 @@ ul.nav a:hover {
 	display: inline-block;
 	width: 350px;
 }
+.unhappy {
+	margin-top: 10%; 
+	margin-bottom: 5%; 
+	font-size: 1.2em; 
+	float:left;
+}
+.cancel {
+	background-color: black; 
+	color: #fff; 
+	margin-top: 8.5%; 
+	margin-left: 10%;
+	float: left;
+}
+.back {
+	font-size: 1.3em; 
+	margin-left: 15%; 
+	float:left; 
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
 .picture {
 	margin-left: 20%;
 }
