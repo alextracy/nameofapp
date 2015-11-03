@@ -60,13 +60,14 @@
 		 	</div> <!-- end navbar-collapse collapse -->
 		</div> <!-- end nav container --> 
   </nav> <!-- end navbar -->
-  <% if notice %>
+ 
+<div class="container">
+	<% if notice %>
   <p id="notice" class="alert alert-info"><%= notice %></p>
   <% end %>
   <% if alert %>
   <p class="alert"><%= alert %></p>
   <% end %>
-<div class="container">
 	<div style="margin-top: 10%">
 		<%= yield %>
 	</div>
