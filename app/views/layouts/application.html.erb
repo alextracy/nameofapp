@@ -65,11 +65,16 @@
 	
 	<div style="margin-top: 10%">
 		<% if notice %>
-  		<div id="notice" class="alert alert-info"><%= notice %></div>
-  	<% end %>
-  	<% if alert %>
-  		<p class="alert"><%= alert %></p>
- 	<% end %>
+  			<div id="notice" class="alert alert-info">
+  				<%= notice %>
+  			</div>
+  		<% end %>
+  		<% if alert %>
+	  		<p class="alert">
+	  			<%= alert %>
+	  		</p>
+ 		<% end %>
+
 		<%= yield %>
 	</div>
 </div>
