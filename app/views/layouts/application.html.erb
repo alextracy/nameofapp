@@ -62,13 +62,14 @@
   </nav> <!-- end navbar -->
  
 <div class="container">
-	<% if notice %>
-  <p id="notice" class="alert alert-info"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-  <p class="alert"><%= alert %></p>
-  <% end %>
+	
 	<div style="margin-top: 10%">
+		<% if notice %>
+  		<div id="notice" class="alert alert-info"><%= notice %></div>
+  	<% end %>
+  	<% if alert %>
+  		<p class="alert"><%= alert %></p>
+ 	<% end %>
 		<%= yield %>
 	</div>
 </div>
