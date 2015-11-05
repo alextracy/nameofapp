@@ -12,4 +12,5 @@ class OrdersController < ApplicationController
 	def create
 	end
 
+	before_filter :authenticate_user!
 end

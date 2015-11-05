@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
-@products = Product.where("LOWER(name) LIKE ?OR LOWER(description) LIKE ?", "%#{search_term.downcase}%", "%#{search_term.downcase}%")      # return our filtered list here
+      @products = Product.where("LOWER(name) LIKE ?OR LOWER(description) LIKE ?", "%#{search_term.downcase}%", "%#{search_term.downcase}%")      # return our filtered list here
     else
       @products = Product.all
     end
