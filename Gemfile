@@ -56,3 +56,5 @@ gem 'devise'
 
 gem 'cancancan'
 
+gem 'ratyrate'
+
