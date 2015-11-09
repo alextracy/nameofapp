@@ -51,10 +51,11 @@ group :development do
   gem 'spring'
 end
 
-
 gem 'devise'
 
 gem 'cancancan'
 
 gem 'ratyrate'
+
+gem 'will_paginate', '~> 3.0.6'
 
