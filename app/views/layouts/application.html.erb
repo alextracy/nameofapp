@@ -61,7 +61,7 @@
   </nav> <!-- end navbar -->
  
 <div class="container">
-	<% if notice %>
+	<div style="text-align: center; font-size: 1.5em;"><% if notice %>
   			<div id="notice" class="alert alert-info" style="margin-top:2%; margin-bottom:5%">
   				<%= flash[:notice] %>
   			</div>
@@ -70,8 +70,8 @@
 	  		<div id="notice" class="alert alert-info" style="margin-top:2%; margin-bottom:5%">
 	  			<%= alert %>
 	  		</div>
- 		<% end %>
-	<div style="margin-top: 10">
+ 		<% end %></div>
+	<div style="margin-top: 7%">
 		
 		<%= yield %>
 	</div>
