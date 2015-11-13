@@ -14,7 +14,18 @@ describe Product do
 		
 
 		it "returns the average rating of all comments" do
-			expect(@product.average_rating).to eq "3"
+			expect(@product.average_rating).to eq 3
+		end
+	end
+
+	context "When creating a new product" do
+
+		before {
+			@product = Product.create(:description => "This is a fast bike")
+		}
+
+		it "not valid without a name" do
+			expect(@product).not_to be_valid
 		end
 	end
 
