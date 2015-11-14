@@ -12,7 +12,6 @@ describe Product do
 			@product.comments.create(:rating => 5, :user => @user, :body => "Awesome bike!") 
 		}
 		
-
 		it "returns the average rating of all comments" do
 			expect(@product.average_rating).to eq 3
 		end
