@@ -64,9 +64,8 @@ gem 'will_paginate', '~> 3.0.6'
 
 gem 'will_paginate-bootstrap'
 
-<<<<<<< HEAD
 gem 'spork-rails'
-=======
+
 gem 'stripe'
->>>>>>> stripe
+
 
