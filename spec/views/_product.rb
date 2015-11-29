@@ -33,7 +33,7 @@ describe Product do
 			product = build(:product, :description => "This is a fast bike")
 		
 
-		it "not valid without a name" d
+		it "not valid without a name" do
 			expect(product).not_to be_valid
 		end
 	end
