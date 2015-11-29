@@ -63,3 +63,5 @@ gem 'will_paginate', '~> 3.0.6'
 
 gem 'will_paginate-bootstrap'
 
+gem "factory_girl_rails", "~> 4.0"
+
