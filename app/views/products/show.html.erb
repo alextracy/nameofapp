@@ -5,6 +5,7 @@
 		</p>
 
 		<div class="productdetails">
+			<div class="detailbox">
 			<p>
 			  <strong>Name:</strong>
 			  <%= @product.name %>
@@ -18,9 +19,15 @@
 			  <strong>Color:</strong>
 			  <%= @product.color %>
 			</p>
-			<p>Average Rating: 
-				<div class="rated" data-score="<%= @product.average_rating %>"></div> 
+			<strong style="float:left; margin-right:5px">Average Rating:</strong><div class="rated" data-score="<%= @product.average_rating %>"></div> 
+			
+			<p style="clear:left; margin-top: 30px"> 
+			 <strong>Price: $<%= @product.price %></strong>
 			</p>
+			<%= form_tag "/payments/create" do %>
+			 	<%= render partial: "shared/stripe_checkout_button" %>
+			 <% end %>
+			</div>
 		</div>
 	</div>
 
