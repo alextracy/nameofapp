@@ -47,10 +47,14 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'guard'
+
+  gem 'guard-rspec', require: false
+
+  gem 'guard-spork'
 end
 
 gem 'devise'
@@ -64,4 +68,6 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 
 gem "factory_girl_rails", "~> 4.0"
+
+gem "spork-rails"
 
