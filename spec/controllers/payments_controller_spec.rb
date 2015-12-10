@@ -2,11 +2,9 @@ require 'rails_helper'
 
 RSpec.describe PaymentsController, type: :controller do
 
-  describe "GET #create" do
-    it "returns http success" do
-      get :create
-      expect(response).to have_http_status(:success)
-    end
+  describe "POST #create" do
+    it "renders the create template" do
+		expect(response).to render_template("create")
+  	end
   end
-
 end

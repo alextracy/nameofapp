@@ -96,11 +96,13 @@ ul.nav a:hover {
 }
 .productdetails {
 	float: right;
-	margin-top: 5%;
 	margin-right: 40%;
 	font: 2em;
+	margin-top: 1%;
 }
-
+.detailbox {
+	margin-bottom: 12%;
+}
 .about1 {
 	height: 100px; 
 	width: 500px; 
@@ -128,7 +130,7 @@ ul.nav a:hover {
 	margin-top: -1%;
 }
 .contactContainer {
-	margin: -10% 20% 5% 20%;
+	margin: -5% 20% 0% 20%;
 	padding: 2%;
 	border-radius: 1em;
 }
@@ -138,7 +140,7 @@ ul.nav a:hover {
 }
 .container {
 	width: 80%;
-	margin-top: 5%
+	margin-top: 2%
 }
 a:visited {
 color: #000;
