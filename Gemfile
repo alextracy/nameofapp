@@ -55,6 +55,9 @@ group :development do
   gem 'guard-rspec', require: false
 
   gem 'guard-spork'
+
+  gem 'brakeman', :require => false
+  
 end
 
 gem 'devise'
