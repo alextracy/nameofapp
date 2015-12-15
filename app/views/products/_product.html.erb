@@ -1,7 +1,7 @@
 <tr>
     <td><%= product.name %></td>
     <td><%= product.description %></td>
-    <td><%= image_tag(product.image_url, :style => 'height: 200px; width: 250px;') %></td>
+    <td><%= image_tag(product.image_url, :style => 'height: 200px; width: 250px; margin-right: -5%;') %></td>
     <td><%= product.color %></td>
     <td><%= number_to_currency(product.price) %></td>
     <td><%= link_to 'Show', product %></td>

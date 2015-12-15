@@ -34,22 +34,21 @@
 
 	
 	<div class="col-md-6 comments" style="padding: 0; float: none;">
-	    	<div class="well well1">
+	    <div class="well well1">
+	    	<h2>Reviews:</h2>
 			<%= render 'new_comment' %>
 			<% @comments.each do |comment| %>
-				
-					<hr/>
+				<hr>
 					<p>
-						<%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
-						<% if signed_in? && current_user.admin? %>
-							<%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, product_comment_path(@product, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+						<%= comment.user.first_name %> 
+							<small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
+							<% if signed_in? && current_user.admin? %>
+								<%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, product_comment_path(@product, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
 						<% end %>
 					</p>
 
 					<p><%= "Rating: #{comment.rating}/5" %></p>
-					<p><%= comment.body %></p>
-				
-
+				<p><%= comment.body %></p>	
 			<% end %>
 			<div style="text-align: center">
 				<%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
