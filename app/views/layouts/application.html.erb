@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
 <title>Ruby Project 2.0</title>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 <script type="text/javascript"> $(document).ready(function () { $('.dropdown-toggle').dropdown(); }); </script>
-<script>
-    $('.image').elevateZoom();
-</script>
-  
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
@@ -63,7 +60,7 @@
 		  					<%= render 'devise/menu/login_items' %>
 						</li>
 						<li>
-						  <%= render 'devise/menu/registration_items' %>
+						  	<%= render 'devise/menu/registration_items' %>
 						</li>
 				  	</ul>
 		 	</div> <!-- end navbar-collapse collapse -->

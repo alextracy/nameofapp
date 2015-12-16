@@ -1,7 +1,7 @@
 	<div class="well">
-		<p>
-		  <%= image_tag(@product.image_url, class: 'image')%>
-		</p>
+		<div>
+		  <%= image_tag @product.image_url, class: 'image', data: { zoom_image: @product.image_url } %>
+		</div>
 
 		<div class="productdetails">
 			<p class="detailbox">
