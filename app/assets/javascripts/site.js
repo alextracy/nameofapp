@@ -7,5 +7,5 @@ $(document).on('ready page:load', function(){
 		}
 	});
 
-	$('.image').elevateZoom();
+	$('#zoom_01').elevateZoom( { path: '/assets', 'data-zoom-image'} );
 });
