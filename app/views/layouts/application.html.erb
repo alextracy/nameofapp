@@ -6,16 +6,14 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<script type="text/javascript"> $(document).ready(function () { $('.dropdown-toggle').dropdown(); }); </script>
-
 <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 <%= javascript_include_tag 'prototype' %>
 
-<%= csrf_meta_tag %>
 
+<%= csrf_meta_tag %>
 
 </head>
 <body>
@@ -36,17 +34,17 @@
 		 	</div>
 		 	
 	 	<div class="navbar-header" style="float:right; margin-top: 1%">
-	 		<%= button_tag(type: 'button', class: 'navbar-toggle', data: { toggle: 'collapse', target: '.navbar-collapse' } ) do %>
-	 			<%= content_tag :span, 'Toggle navigation', class:'sr-only' %>
-	 			<%= content_tag :span, class:'icon-bar' %>
-	 			<%= content_tag :span, class:'icon-bar' %>
-	 			<%= content_tag :span, class:'icon-bar' %>
-	 		<% end %>
+	 		<button type= 'button' class= 'navbar-toggle' data-toggle= "collapse" data-target= 'navbar-collapse'>
+	 			<span class= 'sr-only'>Toggle navigation</span>
+	 			<span class= "icon-bar"></span>
+	 			<span class= "icon-bar"></span>
+	 			<span class= "icon-bar"></span>
+	 		</button>
 
 		 	<div class="navbar-collapse collapse" style: "float:right">	
 			  		<ul class="nav navbar-nav">
 			  			<li>
-			  				<%= link_to 'Home', '../static_pages/landing_page' %>
+			  				<%= link_to 'Home', '../static_pages/landing_page', class: 'active' %>
 			  			</l>
 			  			<li>
 			  				<%= link_to 'Products', '/products' %>
