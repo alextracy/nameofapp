@@ -1,10 +1,10 @@
 <tr>
-    <td><%= product.name %></td>
-    <td><%= product.description %></td>
-    <td><%= image_tag(product.image_url, :style => 'height: 200px; width: 250px; margin-right: -5%;') %></td>
-    <td><%= product.color %></td>
-    <td><%= number_to_currency(product.price) %></td>
-    <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td style="text-align: center"><%= product.name %></td>
+    <td style="text-align: center"><%= product.description %></td>
+    <td style="text-align: center"><%= image_tag(product.image_url, :style => 'height: 200px; width: 250px; ') %></td>
+    <td style="text-align: center"><%= product.color %></td>
+    <td style="text-align: center"><%= number_to_currency(product.price) %></td>
+    <td style="text-align: center"><%= link_to 'Show', product %></td>
+    <td style="text-align: center"><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td style="text-align: center"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </tr>
