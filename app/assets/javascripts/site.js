@@ -10,5 +10,7 @@ function ratyRating(){
 
 $(document).on('ready page:load', function(){
  ratyRating();
- $('#zoom_01').elevateZoom();
+ $('#Zoom_01').elevateZoom({
+ 	cursor: default
+ });
 });
