@@ -1,4 +1,4 @@
-$(document).on('ready page:load', function(){
+$(document).on('page:load ready', function(){
 	$('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
 	$('.rated').raty({ path: '/assets', 
 		readOnly: true, 
@@ -6,8 +6,7 @@ $(document).on('ready page:load', function(){
 		return $(this).attr('data-score');
 		}
 	});
-
-	$('#zoom_01').elevateZoom();
+    $('#zoom_01').elevateZoom();
 
 	$('.dropdown-toggle').dropdown();
 });
