@@ -1,12 +1,11 @@
-
-    	<% if signed_in? %>
+		<% if signed_in? %>
 			<h2>Add a review:</h2>
-			<%= form_for([@product, @product.comments.build]) do |f| %>
+			<%= form_for([@product, @product.comments.build], remote: true, id: 'new_comment') do |f| %>
 				<p>
-					<%= f.label :body, "Comments" %><br>
+					<%= f.label :body, "Comments:" %><br>
 					<%= f.text_area :body, class: "form-control" %>
 				</p>
-				<p><b>Give it a rating:</b>
+				<p style="float:left; margin-right:5px" ><b>Give it a rating:</b>
 					<div class="rating"></div>
 				</p>
 				<p>

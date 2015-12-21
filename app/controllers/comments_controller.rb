@@ -12,6 +12,7 @@ class CommentsController < ApplicationController
 				format.json {
 					render :show, status: :created, location: @product
 				}
+				format.js
 			else
 				format.html {
 					redirect_to @product, alert: 'Review was not saved successfully.'
@@ -27,8 +28,15 @@ end
 		@comment = Comment.find(params[:id])
 		product = @comment.product
 		@comment.destroy
-		redirect_to product
-	end
+		respond_to do |format|
+				format.html {
+					redirect_to @product
+				}
+				format.json {
+					render :show, status: :destroyed, location: @product
+				}
+				format.js 
+		end
 
 protected
 	
