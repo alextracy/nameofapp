@@ -8,6 +8,4 @@ $(document).on('ready page:load', function(){
 	});
 	
     $('#zoom_01').elevateZoom();
-
-    $(".product-reviews").prepend("<%= j render @comment %>");
 });

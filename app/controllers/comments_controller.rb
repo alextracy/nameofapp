@@ -21,14 +21,20 @@ class CommentsController < ApplicationController
 					render json: @comment.errors, status: :unprocessable_entity
 				}
 			end
-	end
-end
+		end
+	end	
+
+
 	def destroy
 		@comment = Comment.find(params[:id])
 		product = @comment.product
 		@comment.destroy
-		redirect_to @product
-	end
+		respond_to do |format|
+      		format.html { redirect_to product_url, notice: 'Product was successfully destroyed.' }
+      		format.json { head :no_content }
+      		format.js  { render inline: "location.reload();"  }
+    	end
+    end
 
 protected
 	

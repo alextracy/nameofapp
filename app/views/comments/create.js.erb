@@ -1,8 +1,7 @@
-	$(document).on('ready page:load', function(){
-		$("#new_comment").html("Thank you for your review!").after({
-		location.reload();
-		});
-	});
+$("#new_comment").html("Thank you for your review!");
+$(".product-reviews").prepend("<%= j render @comment %>");
+
+
 
 
 /* $.ajax({
@@ -11,6 +10,13 @@
           do_something_with(data);
         }
     })
+
+    {
+					render inline: "location.reload();" 
+				}
+
+				$("#new_comment").html("Thank you for your review!");
+$(".product-reviews").prepend('<%= j render (@comment) %>');
 */
 
 
@@ -18,10 +24,15 @@
  	$("#new_comment").hide();
 	$(".product-reviews").prepend("<%= j render @comment %>");
 )};
+
+
+$("#new_comment").html("Thank you for your review!");
+$(".product-reviews").prepend("<%= j render @comment %>");
 */
 
 
 
-// html("Thank you for your review!").after('<%= render("form") %>');
+/* html("Thank you for your review!").after('<%= render("form") %>');
 // $(".product-reviews").prepend("<%= j render @comment %>");
-// '<%= j render :partial => 'comments/comment', :formats => :html %>');
+ '<%= j render :partial => 'comments/comment', :formats => :html %>');
+ */
