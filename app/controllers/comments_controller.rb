@@ -23,20 +23,12 @@ class CommentsController < ApplicationController
 			end
 	end
 end
-
 	def destroy
 		@comment = Comment.find(params[:id])
 		product = @comment.product
 		@comment.destroy
-		respond_to do |format|
-				format.html {
-					redirect_to @product
-				}
-				format.json {
-					render :show, status: :destroyed, location: @product
-				}
-				format.js 
-		end
+		redirect_to @product
+	end
 
 protected
 	

@@ -39,6 +39,7 @@
 	    		<h2>Reviews:</h2>
 	    		<hr>
 				<%= render 'new_comment' %>
+			<div class="product-reviews">
 				<% @comments.each do |comment| %>
 					<hr>
 						<p>
@@ -50,11 +51,12 @@
 						</p>
 
 						<p><%= "Rating: #{comment.rating}/5" %></p>
-					<p id="product-reviews"><%= comment.body %></p>	
+					<p><%= comment.body %></p>	
 				<% end %>
 				<div style="text-align: center">
 					<%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
 				</div>
+			</div>
 		</div>
 	</div>
 	
