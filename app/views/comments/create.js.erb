@@ -1,5 +1,6 @@
 $("#new_comment").html("Thank you for your review!").addClass("alert alert-success");
 $("#product-reviews").prepend("<%= j render @comment %>").raty('rated');
+$('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
 $('.rated').raty({ path: '/assets', 
         readOnly: true, 
         score: function() {
