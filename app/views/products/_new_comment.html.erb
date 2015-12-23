@@ -1,5 +1,5 @@
 		<% if signed_in? %>
-			<h2>Add a review:</h2>
+			<h2 style="text-align: center; margin-top: -2%;">Add a review</h2>
 			<%= form_for [@product, @product.comments.build ], remote: true do |f| %>
 				<p>
 					<%= f.label :body, "Comments:" %><br>
@@ -9,7 +9,7 @@
 					<div class="rating"></div>
 				</p>
 				<p>
-					<%= f.submit "Submit", class: "btn btn-md btn-primary ", :style => "background-color: #2ecc71;" %>
+					<%= f.submit "Add Review", class: "btn btn-md btn-primary ", :style => "background-color: #2ecc71;" %>
 				</p>
 			<% end %>
 		<% end %>

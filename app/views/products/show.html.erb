@@ -36,10 +36,9 @@
 	
 	<div class="col-md-6 comments" style="padding: 0; float: none;">
 	    <div class="well well1">
-	    		<h2>Reviews:</h2>
-	    		<hr>
+	    		<%= render 'new_comment' %>
 	    	<div id='product-reviews'>
-				<%= render 'new_comment' %>
+	    		<h2 style="margin-top: 5%; margin-bottom: -5%;">Reviews:</h2>
 				<% @comments.each do |comment| %>
 					<hr>
 						<p>
@@ -49,7 +48,7 @@
 									<%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, product_comment_path(@product, comment), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: 'delete_comment' %>
 							<% end %>
 						</p>
-						<p><%= "Rating: #{comment.rating}/5" %></p>
+						<p class="rated" data-score="<%= comment.rating %>">Rated: </p>
 					<p><%= comment.body %></p>
 				<% end %>
 				<div style="text-align: center">

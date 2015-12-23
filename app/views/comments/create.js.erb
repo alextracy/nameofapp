@@ -1,4 +1,8 @@
-$(document).on('ready page:load', function(){
-$("#new_comment").html("Thank you for your review!");
-$("#product-reviews").prepend("<%= j render @comment %>");
-});
+$("#new_comment").html("Thank you for your review!").addClass("alert alert-success");
+$("#product-reviews").prepend("<%= j render @comment %>").raty('rated');
+$('.rated').raty({ path: '/assets', 
+        readOnly: true, 
+        score: function() {
+        return $(this).attr('data-score');
+        }
+    });
