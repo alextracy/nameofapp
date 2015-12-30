@@ -82,3 +82,5 @@ gem 'stripe'
 
 gem 'jquery-turbolinks'
 
+gem 'angularjs-rails'
+
