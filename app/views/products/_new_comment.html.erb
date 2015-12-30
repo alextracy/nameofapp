@@ -1,5 +1,5 @@
 		<% if signed_in? %>
-			<h2 class="headreview"style="text-align: center; margin-top: -2%;">Add a review</h2>
+			<h2 style="text-align: center; margin-top: -2%;">Add a review</h2>
 			<%= form_for [@product, @product.comments.build ], remote: true do |f| %>
 				<p>
 					<%= f.label :body, "Comments:" %><br>

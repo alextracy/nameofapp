@@ -37,7 +37,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
-    autoprefixer-rails (6.2.1)
+    autoprefixer-rails (6.2.2)
       execjs
       json
     bcrypt (3.1.10)
@@ -83,7 +83,6 @@ GEM
     diff-lcs (1.2.5)
     domain_name (0.5.25)
       unf (>= 0.0.5, < 1.0.0)
-    elevatezoom-rails (1.0.0)
     erubis (2.7.0)
     execjs (2.6.0)
     factory_girl (4.5.0)
@@ -121,8 +120,8 @@ GEM
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.7.0)
-    jbuilder (2.3.2)
-      activesupport (>= 3.0.0, < 5)
+    jbuilder (2.4.0)
+      activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
     jquery-rails (4.0.5)
       rails-dom-testing (~> 1.0)
@@ -299,7 +298,6 @@ DEPENDENCIES
   cancancan
   coffee-rails (~> 4.1.0)
   devise
-  elevatezoom-rails
   factory_girl_rails (~> 4.0)
   guard
   guard-rspec
