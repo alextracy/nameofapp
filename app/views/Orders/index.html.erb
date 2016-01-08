@@ -1,5 +1,25 @@
-<input type="text" placeholder="Your name" ng-model="name">
-
 <div ng-controller="OrdersCtrl">
-	{{name}}
+	{{orders}}
 </div>
+<table class="table table-hover">
+	<thead>
+		<td>Order ID</td>
+		<td>Total</td>
+		<td>Product</td>
+		<td></td>
+	</thead>
+<tr ng-repeat="order in orders ">
+	<td>
+		{{order.id}}
+	</td>
+	<td>
+		<strong>{{order.total}}</strong>
+	</td>
+	<td>
+		{{order.product_id}}
+	</td>
+	<td>
+		<!-- we will fill this later with content -->
+	</td>
+<tr>
+</table>
