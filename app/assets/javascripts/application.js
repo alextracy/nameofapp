@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require angular
+//= require angular-resource
 //= require turbolinks
 //= require jquery.elevateZoom-3.0.8.min
 //= require_tree .
