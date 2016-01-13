@@ -84,3 +84,5 @@ gem 'jquery-turbolinks'
 
 gem 'angularjs-rails'
 
+gem 'dalli'
+
