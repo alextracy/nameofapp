@@ -15,7 +15,9 @@
     </tr>
   </thead>
   <tbody>
+    <% cache(cache_key_for_products) do %>
       <%= render @products %>
+    <% end %>
   </tbody>
 </table>
 </div>

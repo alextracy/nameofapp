@@ -7,7 +7,9 @@
 		<div class="productdetails">
 			<p class="detailbox">
 			  <strong>Name:</strong>
+			  <% cache @product do %>
 			  <%= @product.name %>
+			  <% end %>
 			</p>
 
 			<p class="detailbox">
@@ -25,9 +27,11 @@
 			 <strong>Price: <%= number_to_currency(@product.price) %></strong>
 			</p>
 			<div style="margin-top: 10%">
+			<% cache do %>
 			<%= form_tag "/payments/create" do %>
 				<%= hidden_field_tag :product_id, @product.id %>
 			 	<%= render partial: "shared/stripe_checkout_button" %>
+			 <% end %>
 			 <% end %>
 			</div>
 		</div>
