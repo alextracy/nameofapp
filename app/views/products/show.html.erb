@@ -28,10 +28,10 @@
 			</p>
 			<div style="margin-top: 10%">
 			<% cache do %>
-			<%= form_tag "/payments/create" do %>
-				<%= hidden_field_tag :product_id, @product.id %>
-			 	<%= render partial: "shared/stripe_checkout_button" %>
-			 <% end %>
+				<%= form_tag "/payments/create" do %>
+					<%= hidden_field_tag :product_id, @product.id %>
+				 	<%= render partial: "shared/stripe_checkout_button" %>
+				 <% end %>
 			 <% end %>
 			</div>
 		</div>
