@@ -38,7 +38,7 @@ GEM
       tzinfo (~> 1.1)
     angularjs-rails (1.4.8)
     arel (6.0.3)
-    autoprefixer-rails (6.2.3)
+    autoprefixer-rails (6.3.1)
       execjs
       json
     bcrypt (3.1.10)
@@ -148,6 +148,7 @@ GEM
     multi_json (1.11.2)
     nenv (0.2.0)
     netrc (0.11.0)
+    newrelic_rpm (3.14.1.311)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     notiffany (0.0.8)
@@ -326,6 +327,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
+  newrelic_rpm
   pg
   rails (= 4.2.4)
   rails_12factor
