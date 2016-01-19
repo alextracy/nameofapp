@@ -21,9 +21,6 @@ h1 {
 	font-weight: 600;
 	padding-right: 1%;
 }
-ul.nav a:hover { 
-	color: black !important; 
-}
 .registration {
 	background-color: blue;
 }
@@ -45,12 +42,12 @@ ul.nav a:hover {
 	background-color: #fff;
 	text-decoration: none;
 }
-.searchform {
-	display: inline-block;
-	width: 350px;
-}
 ul.nav a:hover { 
 	color: black !important; 
+}
+.searchform {
+	display: inline-block;
+	width: 20%;
 }
 .unhappy {
 	margin-top: 10%; 
@@ -127,7 +124,7 @@ ul.nav a:hover {
 	height: 40%; 
 	margin: 5px;
 	display: inline-block;
-	position: relative;;
+	position: relative;
 }
 .contactinfo {
 	margin-left: 3%;
@@ -139,19 +136,22 @@ ul.nav a:hover {
 	border-radius: 1em;
 }
 .contactContainer2 {
-	width: 80%;
-	margin: 0% 10%;
+	width: 100%;
+	margin: 0% 20%;
 }
 .container {
 	width: 80%;
 	margin-top: 5%;
+	position: absolute;
 }
 a:visited {
 color: #000;
 }
 a:hover {
 color: #fff;
-
+}
+.leftandright:hover {
+	background-color: none !important;
 }
 footer {
 	margin-top: 5%;

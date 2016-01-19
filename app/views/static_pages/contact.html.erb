@@ -7,7 +7,7 @@
 				<h2 style="text-align: center; margin-bottom: 5%">Contact Us</h2>
 				<hr>
 
-				<%= form_tag("/static_pages/thank_you") do %>
+				<%= form_tag("/static_pages/thank_you", style: "autocorrect=off, autocapitalize=words") do %>
 					<div class="row">
 						<div class="form-group">
 							<%= label_tag :name, "Name" %>
@@ -15,7 +15,7 @@
 						</div>
 						<div class="form-group">
 							<%= label_tag :email, "Email Address" %>
-							<%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+							<%= text_field_tag :email, nil, type: "email",class: "form-control", placeholder: "Enter Email" %>
 						</div>
 						<div class="form-group">
 							<%= label_tag :message, "Message" %>
