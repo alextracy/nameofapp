@@ -12,6 +12,8 @@
 
 <%= javascript_include_tag 'prototype' %>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <%= csrf_meta_tag %>
 
 </head>
@@ -25,12 +27,12 @@
 				<div class="searchform">
 		 			<%= form_tag("/products", method: "get", class: "navbar-form", role: "search") do %>
 		 				<%= submit_tag "Search", name: nil, class: "btn btn-default" %>
-			 			<div class="form-group">
+			 			<div class="form-group" style="display: inline-block">
 						 <%= text_field_tag([:q], nil, placeholder: 'Find products here', class: 'input-medium form-control' ) %>
 						</div>
 					<% end %>
 				</div>
-		 	</div>
+		 	
 		 	
 	 	<div class="navbar-header" style="float:right; margin-top: 1%">
 	 		<button type= 'button' class= 'navbar-toggle' data-toggle= "collapse" data-target= 'navbar-collapse'>
@@ -62,24 +64,26 @@
 						</li>
 				  	</ul>
 		 	</div> <!-- end navbar-collapse collapse -->
+		 	</div>
 		</div> <!-- end nav container --> 
   </nav> <!-- end navbar -->
- 
-<div style="margin-top: 7%">
-	<div style="text-align: center; font-size: 1.5em">
-		<% if notice %>
-  			<div id="notice" class="alert alert-info">
-  				<%= flash[:notice] %>
-  			</div>
-  		<% end %>
-  		<% if alert %>
-	  		<div id="notice" class="alert alert-info" >
-	  			<%= alert %>
-	  		</div>
- 		<% end %>
- 	</div>
-	<div>
-		<%= yield %>
+<div class="container">
+	<div style="margin-top: 5%;">
+		<div style="text-align: center; font-size: 1.5em">
+			<% if notice %>
+	  			<div id="notice" class="alert alert-info">
+	  				<%= flash[:notice] %>
+	  			</div>
+	  		<% end %>
+	  		<% if alert %>
+		  		<div id="notice" class="alert alert-info" >
+		  			<%= alert %>
+		  		</div>
+	 		<% end %>
+	 	</div>
+		<div>
+			<%= yield %>
+		</div>
 	</div>
 </div>
 	<footer>
