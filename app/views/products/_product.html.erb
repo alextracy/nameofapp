@@ -2,7 +2,11 @@
 	<tr>
 	    <td style="text-align: center"><%= product.name %></td>
 	    <td style="text-align: center"><%= product.description %></td>
-	    <td style="text-align: center"><%= image_tag(product.image_url, :style => 'height: 200px; width: 250px; ') %></td>
+	    <td style="text-align: center">
+	    	<div id="productpic">
+	    		<%= image_tag(product.image_url, class: 'image1') %>
+			</div>
+		</td>
 	    <td style="text-align: center"><%= product.color %></td>
 	    <td style="text-align: center"><%= number_to_currency(product.price) %></td>
 	    <td style="text-align: center"><%= link_to 'Show', product %></td>

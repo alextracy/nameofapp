@@ -18,4 +18,5 @@
 //= require angular-resource
 //= require turbolinks
 //= require jquery.elevateZoom-3.0.8.min
+//= require jquery.hoverImageEnlarge
 //= require_tree .

@@ -7,5 +7,9 @@ $(document).on('ready page:load', function(){
 		}
 	});
 	
+	
     $('#zoom_01').elevateZoom();
+
+    $(".image1").hoverImageEnlarge();
+
 });
