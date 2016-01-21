@@ -6,6 +6,7 @@ h1 {
 	font-family: arial;
 	color: black;
 	text-align: center;
+	font-family: 'Ubuntu', sans-serif;
 }
 .nav {
 	top: 0;
@@ -27,6 +28,13 @@ ul.nav a:hover {
 .registration {
 	background-color: blue;
 }
+.signUp {
+	background-color: #2ecc71; 
+	color: #fff; 
+	padding: 6px; 
+	margin-top: 11%; 
+	font: 1.05em bold;
+}
 .projectName {
 	display: inline-block;
 	text-transform: uppercase;
@@ -41,6 +49,10 @@ ul.nav a:hover {
 .landing {
 	height: 50%;
 	text-align:center;
+}
+#landingpic {
+	height: 500px;
+	width: 500px;
 }
 .unhappy {
 	margin-top: 10%; 
