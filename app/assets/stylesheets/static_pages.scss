@@ -25,15 +25,11 @@ ul.nav a:hover {
 	font-weight: 600;
 	background-color: #fff;
 }
-.registration {
-	background-color: blue;
-}
 .signUp {
 	background-color: #2ecc71; 
 	color: #fff; 
-	padding: 6px; 
-	margin-top: 11%; 
-	font: 1.05em bold;
+	margin-top: 1%; 
+	font: 1.05em #fff bold;
 }
 .projectName {
 	display: inline-block;
@@ -54,24 +50,13 @@ ul.nav a:hover {
 	height: 500px;
 	width: 500px;
 }
-.unhappy {
-	margin-top: 10%; 
-	margin-bottom: 5%; 
-	font-size: 1.2em; 
-	float:left;
-}
 .cancel {
-	background-color: black; 
-	color: #fff; 
 	margin-top: 8.5%; 
-	margin-left: 10%;
-	float: left;
+	float: right;
 }
 .back {
-	font-size: 1.3em; 
-	margin-left: 15%; 
 	float:left; 
-	margin-top: 10%;
+	margin-top: 8.5%;
 	margin-bottom: 10%;
 }
 .picture {
@@ -101,11 +86,8 @@ ul.nav a:hover {
 	height: auto;
 }
 .image1 {
-	height: 150px; 
-	width: 150px;
-}
-#productpic {
-	
+	width:150px;
+	height:150px;
 }
 .productdetails {
 	float: right;
@@ -148,11 +130,12 @@ ul.nav a:hover {
 	margin-top: -1%;
 }
 .contactContainer {
-	padding: 2% 20%;
+	padding: 2% 25%;
 	border-radius: 1em;
 }
-.leftandright:hover {
-	background-color: none !important;
+a.leftandright:hover {
+	color: #fff;
+	background-color: transparent;
 }
 footer {
 	margin-top: 10%;

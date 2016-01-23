@@ -10,8 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  * /
-// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
-
+ 
  *= require_tree .
  *= require_self
  */
@@ -19,4 +18,10 @@
  
 input, textarea {
   max-width:100%;
+}
+.appContainer {
+	width: 80%; 
+	margin-left:10%; 
+	margin-top: 5%; 
+	position: static;
 }

@@ -1,9 +1,5 @@
 <% if user_signed_in? %>
-  <li>
-  <%= link_to('Edit registration', edit_user_registration_path) %>
-  </li>
-<% else %>
-  <li>
-  <%= link_to('Sign Up', new_user_registration_path, class: "btn btn-default", style: "background-color: #2ecc71; color: #fff; padding: 6px; margin-top: 11%; font-size: 1.05em;")  %>
-  </li>
+  	<%= link_to('Edit registration', edit_user_registration_path) %>
+  <% else %>
+  	<%= link_to('Sign Up', new_user_registration_path, class: "btn btn-default", style: "font:bold; color: #fff; background-color: #2ecc71") %>
 <% end %>
