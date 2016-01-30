@@ -1,37 +1,44 @@
-<%= form_for(@product) do |f| %>
-  <% if @product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-      <ul>
-        <% @product.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="contactContainer">
+    <div class="border-form-div">
+          <div class="wrapper">
+            <%= form_for(@product) do |f| %>
+              <% if @product.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+                  <ul>
+                    <% @product.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+              <div class="field">
+                <%= f.label :name %><br>
+                <%= f.text_field :name, autofocus: true, :placeholder => "Name", class: "form-control" %>
+              </div>
+              <div class="field">
+                <%= f.label :description %><br>
+                <%= f.text_area :description, autofocus: true, :placeholder => "Description", class: "form-control" %>
+              </div>
+              <div class="field">
+                <%= f.label :image_url %><br>
+                <%= f.text_field :image_url, autofocus: true, :placeholder => "Image Url", class: "form-control" %>
+              </div>
+              <div class="field">
+                <%= f.label :color %><br>
+                <%= f.text_field :color, autofocus: true, :placeholder => "Color", class: "form-control" %>
+              </div>
+              <div class="field">
+                <%= f.label :price %><br>
+                <%= f.text_field :price, autofocus: true, :placeholder => "Price", class: "form-control" %>
+              </div>
+              <div class="actions">
+                <%= f.submit 'Submit', class: 'btn btn-lg btn-primary btn-block', style: "background-color: #2ecc71"  %>
+              </div>
+            <% end %>
+          </div>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
-  </div>
-  <div class="field">
-    <%= f.label :color %><br>
-    <%= f.text_field :color %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

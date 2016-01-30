@@ -8789,6 +8789,56 @@ button.close {
 .star-half-png:before {
   content: "\f123";
 }
+/*! responsive-nav.js 1.0.39 by @viljamis */
+
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media screen and (min-width: 40em) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
 /* line 1, /Users/Atracy18/nameofapp/app/assets/stylesheets/scaffolds.scss */
 body {
   background-color: #fff;
@@ -8817,19 +8867,19 @@ div.field, div.actions {
   margin-bottom: 10px;
 }
 
-/* line 26, /Users/Atracy18/nameofapp/app/assets/stylesheets/scaffolds.scss */
+/* line 27, /Users/Atracy18/nameofapp/app/assets/stylesheets/scaffolds.scss */
 #notice {
   color: green;
 }
 
-/* line 30, /Users/Atracy18/nameofapp/app/assets/stylesheets/scaffolds.scss */
+/* line 31, /Users/Atracy18/nameofapp/app/assets/stylesheets/scaffolds.scss */
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
 
-/* line 36, /Users/Atracy18/nameofapp/app/assets/stylesheets/scaffolds.scss */
+/* line 37, /Users/Atracy18/nameofapp/app/assets/stylesheets/scaffolds.scss */
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -8838,7 +8888,7 @@ div.field, div.actions {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 }
-/* line 44, /Users/Atracy18/nameofapp/app/assets/stylesheets/scaffolds.scss */
+/* line 45, /Users/Atracy18/nameofapp/app/assets/stylesheets/scaffolds.scss */
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -8849,12 +8899,31 @@ div.field, div.actions {
   background-color: #c00;
   color: #fff;
 }
-/* line 55, /Users/Atracy18/nameofapp/app/assets/stylesheets/scaffolds.scss */
+/* line 56, /Users/Atracy18/nameofapp/app/assets/stylesheets/scaffolds.scss */
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
 }
-/* line 5, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 4, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 6, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+a.navbar {
+  color: #000;
+}
+/* line 9, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+a.navbar:visited {
+  color: #666;
+}
+/* line 13, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+a.navbar:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 18, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 h1 {
   font-family: arial;
   color: black;
@@ -8862,32 +8931,30 @@ h1 {
   font-family: 'Ubuntu', sans-serif;
 }
 
-/* line 11, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
-.nav {
-  top: 0;
-  display: inline-block;
-}
-
-/* line 15, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 24, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .nav li a {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
-/* line 19, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 28, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 ul.nav a:hover {
   color: black !important;
 }
 
-/* line 22, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 31, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .navbar {
-  background-color: #fff translucent;
-  border-bottom-color: #fff;
+  border-bottom-color: transparent;
   font-weight: 600;
-  background-color: #fff;
+  background-color: transparent;
 }
 
-/* line 28, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 36, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+.navbar-collapse, collapse {
+  text-align: center;
+}
+
+/* line 39, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .signUp {
   background-color: #2ecc71;
   color: #fff;
@@ -8895,52 +8962,62 @@ ul.nav a:hover {
   font: 1.05em #fff bold;
 }
 
-/* line 34, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 45, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .projectName {
+  font-size: 1em;
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 1em;
+  color: grey;
+  margin-top: 1%;
+  float: left;
 }
 
-/* line 40, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
-.projectName a:hover {
+/* line 54, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+.projectName:hover {
   color: black !important;
   background-color: #fff;
   text-decoration: none;
 }
 
-/* line 45, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 62, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .landing {
   height: 50%;
   text-align: center;
 }
 
-/* line 49, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 66, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 #landingpic {
-  height: 500px;
-  width: 500px;
+  height: 50%;
+  width: 100%;
 }
 
-/* line 53, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 70, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .cancel {
   margin-top: 8.5%;
   float: right;
 }
 
-/* line 57, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
-.back {
-  float: left;
-  margin-top: 8.5%;
+/* line 74, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+.edit {
+  float: right;
+  margin-top: 5%;
   margin-bottom: 10%;
 }
 
-/* line 62, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 79, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+.back {
+  float: left;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+/* line 84, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .picture {
   margin-left: 20%;
 }
 
-/* line 65, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 87, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .founderImage {
   height: 300px;
   width: 200px;
@@ -8948,12 +9025,12 @@ ul.nav a:hover {
   float: left;
 }
 
-/* line 71, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 93, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .main-show {
   height: 50%;
 }
 
-/* line 74, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 96, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .image {
   height: 300px;
   width: 300px;
@@ -8962,44 +9039,52 @@ ul.nav a:hover {
   border-radius: .5em;
 }
 
-/* line 81, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 103, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .well {
   clear: left;
   height: 340px;
 }
 
-/* line 85, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 107, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .well1 {
   height: auto;
 }
 
-/* line 88, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 110, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .image1 {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
 }
 
-/* line 92, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 114, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+.addp {
+  text-decoration: none;
+  color: #2ecc71;
+}
+
+/* line 118, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .productdetails {
-  float: right;
-  margin-right: 40%;
+  float: left;
+  margin-left: 10%;
   font: 2em;
   margin-top: 1%;
+  display: inline-block;
+  position: inherit;
 }
 
-/* line 98, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 126, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .detailbox {
   margin-bottom: 12%;
 }
 
-/* line 101, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 129, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .aboutContainer {
   margin-left: 10%;
   margin-top: 5%;
   margin-bottom: 10%;
 }
 
-/* line 106, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 134, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .about1 {
   height: 100px;
   width: 500px;
@@ -9008,7 +9093,7 @@ ul.nav a:hover {
   margin-left: 10%;
 }
 
-/* line 113, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 141, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .about2 {
   height: 100px;
   width: 500px;
@@ -9016,7 +9101,7 @@ ul.nav a:hover {
   float: left;
 }
 
-/* line 119, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 147, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .contact1 {
   box-sizing: border-box;
   border: 1px solid black;
@@ -9027,29 +9112,30 @@ ul.nav a:hover {
   position: relative;
 }
 
-/* line 128, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 156, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .contactinfo {
   margin-left: 3%;
   margin-top: -1%;
 }
 
-/* line 132, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 160, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 .contactContainer {
   padding: 2% 25%;
   border-radius: 1em;
 }
 
-/* line 136, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 164, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 a.leftandright:hover {
   color: #fff;
   background-color: transparent;
 }
 
-/* line 140, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
+/* line 168, /Users/Atracy18/nameofapp/app/assets/stylesheets/static_pages.scss */
 footer {
   margin-top: 10%;
   text-align: center;
   clear: left;
+  position: relative;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -9067,15 +9153,21 @@ footer {
 
 
  */
-/* line 20, /Users/Atracy18/nameofapp/app/assets/stylesheets/application.scss */
+/* line 19, /Users/Atracy18/nameofapp/app/assets/stylesheets/application.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 21, /Users/Atracy18/nameofapp/app/assets/stylesheets/application.scss */
 input, textarea {
   max-width: 100%;
 }
 
-/* line 23, /Users/Atracy18/nameofapp/app/assets/stylesheets/application.scss */
+/* line 24, /Users/Atracy18/nameofapp/app/assets/stylesheets/application.scss */
 .appContainer {
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
   width: 80%;
-  margin-left: 10%;
-  margin-top: 5%;
   position: static;
 }

@@ -10,27 +10,16 @@ $(document).on('ready page:load', function(){
 	
     $('#zoom_01').elevateZoom();
 
-    $(window).scroll(function(){
-		var scrollTop = $(window).scrollTop();
-		if(scrollTop != 0)
-			$('#nav').stop().animate({'opacity':'0.2'},400);
-		else	
-			$('#nav').stop().animate({'opacity':'1'},400);
-	});
-	
-	$('#nav').hover(
-		function (e) {
-			var scrollTop = $(window).scrollTop();
-			if(scrollTop != 0){
-				$('#nav').stop().animate({'opacity':'1'},400);
-			}
-		},
-		function (e) {
-			var scrollTop = $(window).scrollTop();
-			if(scrollTop != 0){
-				$('#nav').stop().animate({'opacity':'0.2'},400);
-			}
-		}
-	);
+      $(window).scroll(function() { // check if scroll event happened
+        if ($(document).scrollTop() > 12) { // check if user scrolled more than 50 from top of the browser window
+          $(".navbar-fixed-top").fadeOut(); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+        } else {
+          $(".navbar-fixed-top").css("background-color", "transparent").fadeIn(); // if not, change it back to transparent
+        }
+      });
 
+    setTimeout( function()	{
+    	$('#notice').slideUp('slow').hide();
+    } , 4000
+    );
 });

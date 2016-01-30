@@ -1,16 +1,25 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* { box-sizing: border-box;}
 
+a.navbar {
+  color: #000;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
 h1 {
 	font-family: arial;
 	color: black;
 	text-align: center;
 	font-family: 'Ubuntu', sans-serif;
-}
-.nav {
-	top: 0;
-	display: inline-block;
 }
 .nav li a {
 	text-transform: uppercase;
@@ -20,10 +29,12 @@ ul.nav a:hover {
 	color: black !important; 
 }
 .navbar {
-	background-color: #fff translucent;
-	border-bottom-color: #fff;
+	border-bottom-color: transparent;
 	font-weight: 600;
-	background-color: #fff;
+	background-color: transparent;
+}
+.navbar-collapse, collapse {
+	text-align: center;
 }
 .signUp {
 	background-color: #2ecc71; 
@@ -32,31 +43,42 @@ ul.nav a:hover {
 	font: 1.05em #fff bold;
 }
 .projectName {
+	font-size: 1em;
 	display: inline-block;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
-	font-size: 1em;
+	color: grey;
+	margin-top: 1%;
+	float: left;
 }
-.projectName a:hover { 
+.projectName:hover { 
 	color: black !important; 
 	background-color: #fff;
 	text-decoration: none;
+}
+.searchform {
+	
 }
 .landing {
 	height: 50%;
 	text-align:center;
 }
 #landingpic {
-	height: 500px;
-	width: 500px;
+	height: 50%;
+	width: 100%;
 }
 .cancel {
 	margin-top: 8.5%; 
 	float: right;
 }
+.edit {
+	float:right; 
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
 .back {
 	float:left; 
-	margin-top: 8.5%;
+	margin-top: 5%;
 	margin-bottom: 10%;
 }
 .picture {
@@ -86,14 +108,20 @@ ul.nav a:hover {
 	height: auto;
 }
 .image1 {
-	width:150px;
-	height:150px;
+	width:200px;
+	height:200px;
+}
+.addp {
+	text-decoration: none;
+	color: #2ecc71;
 }
 .productdetails {
-	float: right;
-	margin-right: 40%;
+	float: left;
+	margin-left: 10%;
 	font: 2em;
 	margin-top: 1%;
+	display: inline-block;
+	position: inherit;
 }
 .detailbox {
 	margin-bottom: 12%;
@@ -141,4 +169,5 @@ footer {
 	margin-top: 10%;
 	text-align: center;
 	clear: left;
+	position: relative;
 }

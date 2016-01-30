@@ -60,9 +60,11 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div style="margin-top: 5%">
-		<%= link_to 'Edit', edit_product_path(@product) %> |
-		<%= link_to 'Back', products_path %>
+
+		<div class="btn btn-lg btn-default edit">
+			<%= link_to 'update', edit_product_path(@product), style: "text-decoration: none; float: right;" %>
+		</div>
+		<div class="btn btn-lg btn-default back">
+	  		<%= link_to "Back", products_path, style: "text-decoration: none;" %>
+		</div>
 	</div>
