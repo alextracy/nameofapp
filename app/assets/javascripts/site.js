@@ -19,7 +19,10 @@ $(document).on('ready page:load', function(){
       });
 
     setTimeout( function()	{
-    	$('#notice').slideUp('slow').hide();
-    } , 4000
+    	$('#notice').slideUp('slow', function(){
+
+      });
+       } , 4000
     );
 });
+

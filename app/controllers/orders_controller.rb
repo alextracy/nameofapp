@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
 	protect_from_forgery 
+
 	skip_before_action :verify_authenticity_token, if: :json_request?
 	
 	respond_to :json, :html
@@ -18,12 +19,19 @@ class OrdersController < ApplicationController
 	end
 
 	def create
-		@order =Order.create(order_params)
+		@order = Order.create(order_params)
 		respond_with @order
 	end
 
 	def destroy
-		respond_with Order.destroy(params[:id])
+		@order = Order.find(params[:id])
+		@order.destroy
+
+    	respond_to do |format|
+      		format.html { redirect_to orders_url }
+      		format.json { render :nothing => true, :status => :ok }
+		#      format.json { render :nothing => true, :status => :not_found }
+    	end
 	end
 
 	protected 

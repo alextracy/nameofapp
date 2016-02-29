@@ -6,10 +6,9 @@ $(document).on('ready page:load', function(){
 
 app.factory('models', ['$resource', function($resource){
 	var orders_model = $resource("/orders/:id.json", {id: "@id" }); 
-	
 	var products_model = $resource("/products/:id.json", {id: "@id"});
 	
-	var x ={
+	var x = {
 		orders: orders_model,
 		products: products_model
 	};
@@ -35,9 +34,12 @@ app.controller('OrdersCtrl', ['$scope', 'models', function($scope, models){
 
 }]);
 
-/* $scope.orders =[
-	{id: 1, total: 24, product_id: 1, user_id: 1},
-	{id: 2, total: 7, product_id: 1},
-	{id: 3, total: 42, product_id: 1, user_id: 1}
-	];
+/* angular.module('momentumService', ['ngResource']).
+  factory('Task', function($resource) {
+    return $resource('/tasks/:task_id', {}, {
+      destroy: { method: 'DELETE' }
+    });
+  });
+
+  http://blog.berylliumwork.com/2012/09/tutorials-on-angularjs-and-rails-4.html
 */
