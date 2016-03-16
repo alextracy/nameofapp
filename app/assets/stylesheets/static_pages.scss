@@ -17,7 +17,7 @@ h1 {
 ul.nav a:hover { 
 	color: black !important; 
 }
-.navbar {
+.navbar-inverse {
 	border-bottom-color: transparent;
 	font-weight: 600;
 	background-color: transparent;
@@ -45,12 +45,13 @@ ul.nav a:hover {
 	background-color: #fff;
 	text-decoration: none;
 }
-.searchform {
-	
+.signUp {
+	font: bold; 
+	color: #fff; 
+	background-color: #2ecc71;
 }
-.landing {
-	height: 50%;
-	text-align:center;
+.signUp:hover {
+	background-color: #2ecc71;
 }
 #landingpic {
 	height: 50%;
