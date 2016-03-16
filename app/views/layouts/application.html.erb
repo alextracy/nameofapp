@@ -21,7 +21,7 @@
 </head>
 <body data-spy="scroll" data-target=".navbar">
 	<!-- navbar starts here-->
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<nav class="navbar-inverse navbar-fixed-top" role="navigation">
 	 	<div class="container-fluid">
 	 	
 	 		<%= link_to 'Ruby Project', "../static_pages/landing_page", class: "projectName" %>
@@ -39,7 +39,7 @@
 					 			<%= form_tag("/products", method: "get", class: "navbar-form navbar-collapse", role: "search") do %>
 					 				<%= submit_tag "search", name: nil, class: "btn btn-default" %>
 						 			<div class="form-group" style="display: inline-block">
-									 <%= text_field_tag([:q], nil, placeholder: 'Search products..', class: 'input-medium form-control' ) %>
+									 <%= text_field_tag([:q], nil, placeholder: 'Search products..', class: 'input-medium form-control') %>
 									</div>
 								<% end %>
 							</div>
