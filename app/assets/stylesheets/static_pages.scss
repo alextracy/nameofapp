@@ -5,6 +5,7 @@
 
 
 h1 {
+	margin-top: -5%;
 	font-family: arial;
 	color: black;
 	text-align: center;
@@ -25,11 +26,8 @@ ul.nav a:hover {
 .navbar-collapse, collapse {
 	text-align: center;
 }
-.signUp {
-	background-color: #2ecc71; 
-	color: #fff; 
-	margin-top: 1%; 
-	font: 1.05em #fff bold;
+.signUp:hover {
+	background-color: #5cb85c;
 }
 .projectName {
 	font-size: 1em;
@@ -44,11 +42,6 @@ ul.nav a:hover {
 	color: black !important; 
 	background-color: #fff;
 	text-decoration: none;
-}
-.signUp {
-	font: bold; 
-	color: #fff; 
-	background-color: #2ecc71;
 }
 .signUp:hover {
 	background-color: #2ecc71;
@@ -122,11 +115,17 @@ ul.nav a:hover {
 	margin-bottom: 10%;
 }
 .about1 {
-	height: 100px; 
+	height: 50px; 
 	width: 500px; 
 	margin-top: 5%;
 	float: left;
 	margin-left: 10%;
+}
+.aboutHeader2 {
+	height: auto;
+	width: 500px;
+	margin-left: 10%;
+	float: left;
 }
 .about2 {
 	height: 100px;
