@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  	<%= link_to('Edit registration', edit_user_registration_path) %>
+  	<%= link_to 'Edit registration', edit_user_registration_path %>
   <% else %>
-  	<%= link_to('Sign Up', new_user_registration_path, type: "button", class: "btn btn-success-outline signUp", style: "border-color: #5cb85c") %>
+  	<%= link_to 'Sign Up', new_user_registration_path %>
 <% end %>

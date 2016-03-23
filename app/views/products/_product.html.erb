@@ -7,7 +7,7 @@
 	    	<%= product.description %>
 	    </td>
 	    <td style="text-align: center">
-	    	<%= image_tag(product.image_url, class: "image1") %>
+	    	<%= link_to image_tag(product.image_url, class: "image1"), product %>
 		</td>
 	    <td style="text-align: center">
 	    	<%= product.color %>

@@ -35,14 +35,12 @@
 		 		<div class="navbar-collapse collapse">	
 			  		<ul class="nav navbar-nav">
 			  			<li>
-							<div>
-					 			<%= form_tag("/products", method: "get", class: "navbar-form navbar-collapse", role: "search") do %>
-					 				<%= submit_tag "search", name: nil, class: "btn btn-default" %>
-						 			<div class="form-group" style="display: inline-block">
-									 <%= text_field_tag([:q], nil, placeholder: 'Search products..', class: 'input-medium form-control') %>
-									</div>
-								<% end %>
-							</div>
+				 			<%= form_tag("/products", method: "get", class: "navbar-form navbar-collapse", role: "search") do %>
+				 				<%= submit_tag "search", name: nil, class: "btn btn-default" %>
+					 			<div class="form-group" style="display: inline-block">
+								 <%= text_field_tag([:q], nil, placeholder: 'Search products..', class: 'input-medium form-control') %>
+								</div>
+							<% end %>
 						</li>
 			  			<li>
 			  				<%= link_to 'Home', '../static_pages/landing_page', class: 'active' %>
@@ -81,12 +79,10 @@
 		  		</div>
 	 		<% end %>
 	 	</div>
-		<div>
-			<%= yield %>
-		</div>
+		<%= yield %>
 	</div>
 </body>
-<footer>
+<footer class="footer">
 	<p>&copy; Alex Tracy 2015</p>
 </footer>
 </html>

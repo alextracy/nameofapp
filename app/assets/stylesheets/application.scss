@@ -21,10 +21,12 @@ input, textarea {
   max-width:100%;
 }
 .appContainer {
-	margin-top: 10%;
+	margin-top: 5%;
 	margin-left: auto; 
 	margin-right: auto;
 	width: 80%;
 	position: static;
+	overflow:auto;
+ 	padding-bottom:150px;
 }
 
