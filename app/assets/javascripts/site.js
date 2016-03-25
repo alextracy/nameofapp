@@ -17,7 +17,7 @@ $(document).on('ready page:load', function(){
           $("nav").css("background-color", "transparent").fadeIn(); // if not, change it back to transparent
         }
       });
-
+      
     setTimeout( function()	{
     	$('#notice').slideUp('slow', function(){
 

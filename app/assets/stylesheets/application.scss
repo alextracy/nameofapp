@@ -20,8 +20,90 @@
 input, textarea {
   max-width:100%;
 }
+.projectName {
+	font-size: 1em;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: grey;
+	float: left;
+}
+.projectName:hover { 
+	color: black !important; 
+	background-color: #fff;
+	text-decoration: none;
+}
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+    color: #333;
+    background-color: transparent;
+}
+.nav li a {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+ul.nav a:hover { 
+  color: black !important; 
+}
+.navbar-collapse.collapse {
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+}
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: transparent;
+}
+.navbar-collapse {
+  background-color: #fff !important;
+}
+.navbar-inverse {
+  border-bottom-color: transparent;
+  font-weight: 600;
+  background-color: #fff;
+}
+.navbar-toggle {
+	  float:right;
+  	border: none;
+  	background: transparent !important;
+  	dispaly: inline-block;
+  &:hover {
+  }
+.icon-bar:hover {
+    width: 22px;
+    transition: all 0.2s;
+    background: black !important;
+  }
+  .icon-bar {
+    width: 22px;
+    transition: all 0.2s;
+    background: black !important;
+  }
+  .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+  .middle-bar {
+    opacity: 0;
+  }
+  .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+}
+.navbar-toggle.collapsed {
+	
+  .top-bar {
+    transform: rotate(0);
+  }
+  .middle-bar {
+    opacity: 1;
+  }
+  .bottom-bar {
+    transform: rotate(0);
+  }
+}
 .appContainer {
-	margin-top: 5%;
+  margin-top: 50px;
 	margin-left: auto; 
 	margin-right: auto;
 	width: 80%;

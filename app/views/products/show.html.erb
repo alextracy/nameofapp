@@ -1,70 +1,68 @@
 	
 	
-	<div class="well">
-		<div>
+		
+		<div class="well clearfix" style="margin-top: 50px; position: relative;">
 		  <%= image_tag @product.image_url, id: 'zoom_01', class: "image", data_zoom_image: @product.image_url %>
-		</div>
-		<div class="productdetails">
-			<p class="detailbox">
+
+		<div style="margin-top: 10px; float: left;">
+			<p>
 			  <strong>Name:</strong>
 			  <% cache @product do %>
 			  <%= @product.name %>
 			  <% end %>
 			</p>
 
-			<p class="detailbox">
+			<p>
 			  <strong>Description:</strong>
 			  <%= @product.description %>
 			</p>
-			<p class="detailbox">
+			<p>
 			  <strong>Color:</strong>
 			  <%= @product.color %>
 			</p>
+
 			<strong class="detailbox" style="float:left; margin-right:5px">Average Rating:</strong>
-			<div class="rated" style="float:left; margin-right:5px" data-score="<%= @product.average_rating %>"></div> 
-			
-			<p class="detailbox" style="clear:left; margin-top: 25%; "> 
-			 <strong>Price: <%= number_to_currency(@product.price) %></strong>
+			<div class="rated rating" data-score="<%= @product.average_rating %>"></div> 
+
+			<p class="detailbox" style="clear: left; margin-bottom: 10px;"> 
+			 <strong>Price:</strong> <%= number_to_currency(@product.price) %>
 			</p>
-			<div style="margin-top: 10%">
+			
 			<% cache do %>
 				<%= form_tag "/payments/create" do %>
 					<%= hidden_field_tag :product_id, @product.id %>
 				 	<%= render partial: "shared/stripe_checkout_button" %>
 				 <% end %>
 			 <% end %>
+
+		</div>
+	</div>
+
+    <div class="well">
+    		<%= render 'new_comment' %>
+    		<h2 style="">Reviews:</h2>
+    		<div id='product-reviews'>
+			<% @comments.each do |comment| %>
+				<hr>
+					<p>
+						<%= comment.user.first_name %> 
+							<small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
+							<% if signed_in? && current_user.admin? %>
+								<%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, product_comment_path(@product, comment), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: 'delete_comment' %>
+						<% end %>
+					</p>
+					<p class="rated" data-score="<%= comment.rating %>">Rated: </p>
+				<p><%= comment.body %></p>
+			<% end %>
+			<div style="text-align: center">
+				<%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
 			</div>
 		</div>
 	</div>
 
-	
-	<div class="col-md-6 comments" style="padding: 0; float: none;">
-	    <div class="well well1">
-	    		<%= render 'new_comment' %>
-	    		<h2 style="margin-top: 5%;">Reviews:</h2>
-	    		<div id='product-reviews'>
-				<% @comments.each do |comment| %>
-					<hr>
-						<p>
-							<%= comment.user.first_name %> 
-								<small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
-								<% if signed_in? && current_user.admin? %>
-									<%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, product_comment_path(@product, comment), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: 'delete_comment' %>
-							<% end %>
-						</p>
-						<p class="rated" data-score="<%= comment.rating %>">Rated: </p>
-					<p><%= comment.body %></p>
-				<% end %>
-				<div style="text-align: center">
-					<%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
-				</div>
-			</div>
-		</div>
-
-		<div class="btn btn-lg btn-default edit">
-			<%= link_to 'update', edit_product_path(@product), style: "text-decoration: none; float: right;" %>
-		</div>
-		<div class="btn btn-lg btn-default back">
-	  		<%= link_to "Back", products_path, style: "text-decoration: none;" %>
-		</div>
+	<div class="btn btn-lg btn-default edit">
+		<%= link_to 'update', edit_product_path(@product), style: "text-decoration: none; float: right;" %>
+	</div>
+	<div class="btn btn-lg btn-default back">
+  		<%= link_to "Back", products_path, style: "text-decoration: none;" %>
 	</div>

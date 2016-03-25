@@ -1,29 +1,12 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-* { box-sizing: border-box;}
-
 
 h1 {
 	font-family: arial;
 	color: black;
 	text-align: center;
 	font-family: 'Ubuntu', sans-serif;
-}
-.nav li a {
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-}
-ul.nav a:hover { 
-	color: black !important; 
-}
-.navbar-inverse {
-	border-bottom-color: transparent;
-	font-weight: 600;
-	background-color: transparent;
-}
-.navbar-collapse, collapse {
-	text-align: center;
 }
 .btn-success-outline {
 	border: 1px solid #2ecc71;
@@ -48,7 +31,7 @@ ul.nav a:hover {
 	text-decoration: none;
 }
 #landingpic {
-	height: 50%;
+	height: 500px;
 	width: 100% ;
 }
 .cancel {
@@ -57,13 +40,9 @@ ul.nav a:hover {
 }
 .edit {
 	float:right; 
-	margin-top: 5%;
-	margin-bottom: 10%;
 }
 .back {
 	float:left; 
-	margin-top: 5%;
-	margin-bottom: 10%;
 }
 .picture {
 	margin-left: 20%;
@@ -80,16 +59,15 @@ ul.nav a:hover {
 .image {
 	height: 300px; 
 	width: 300px;
-	float: left;
 	display: inline-block;
 	border-radius: .5em;
+	float: left; 
+	margin-right: 19px;
 }
-.well {
-	clear: left;
-	height: 340px;
-}
-.well1 {
-	height: auto;
+.rating {
+	float:left; 
+	margin-right:5px; 
+	margin-bottom: 10px;
 }
 .image1 {
 	width:200px;
@@ -99,17 +77,7 @@ ul.nav a:hover {
 	text-decoration: none;
 	color: #2ecc71;
 }
-.productdetails {
-	float: left;
-	margin-left: 10%;
-	font: 2em;
-	margin-top: 1%;
-	display: inline-block;
-	position: inherit;
-}
-.detailbox {
-	margin-bottom: 12%;
-}
+
 .aboutContainer {
 	margin-left: 10%;
 	margin-top: 5%;
@@ -149,10 +117,6 @@ ul.nav a:hover {
 .contactinfo {
 	margin-left: 3%;
 	margin-top: -1%;
-}
-.contactContainer {
-	padding: 2% 25%;
-	border-radius: 1em;
 }
 a.leftandright:hover {
 	color: #fff;

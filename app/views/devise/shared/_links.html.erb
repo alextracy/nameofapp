@@ -3,11 +3,11 @@
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-default", style: "font-size: 1.3em; float:right; color: #fff; background-color: #2ecc71" %><br />
+  <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-default", style: "font-size: 1.3em; float:left; color: #fff; background-color: #2ecc71" %><br />
 <% end -%>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn btn-default", style: "font-size: 1.3em; margin-top:-5%" %><br />
+  <%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn btn-default", style: "font-size: 1em; float:right;]" %><br />
 <% end -%>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
