@@ -59,31 +59,31 @@ group :development do
   gem 'guard-spork'
 
   gem 'brakeman', :require => false
-  
-end
 
-gem 'devise'
+  gem 'devise'
 
-gem 'cancancan'
+  gem 'cancancan'
 
-gem 'ratyrate'
+  gem 'ratyrate'
 
-gem 'will_paginate', '~> 3.0.6'
+  gem 'will_paginate', '~> 3.0.6'
 
-gem 'will_paginate-bootstrap'
+  gem 'will_paginate-bootstrap'
 
-gem "factory_girl_rails", "~> 4.0"
+  gem "factory_girl_rails", "~> 4.0"
 
-gem "spork-rails"
+  gem "spork-rails"
 
-gem 'stripe'
+  gem 'stripe'
 
-gem 'jquery-turbolinks'
+  gem 'jquery-turbolinks'
 
-gem 'angularjs-rails'
+  gem 'angularjs-rails'
 
-gem 'dalli'
+  gem 'dalli'
 
-gem "redis-rails"
+  gem "redis-rails"
 
-gem 'newrelic_rpm'
+  gem 'newrelic_rpm'
+
+end 
