@@ -1,17 +1,15 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '4.2.4'
 # gem 'therubyracer', platforms: :ruby
-
 group :production do
-	gem 'rails_12factor'
-	gem 'pg'
+  gem 'rails_12factor'
+  gem 'pg'
 end
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-	gem 'sqlite3'
+  gem 'sqlite3'
 end
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.1'
@@ -22,9 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'byebug'
 
-gem 'rspec-rails', '~> 3.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -46,12 +42,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+  gem 'rspec-rails', '~> 3.0'
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-end 
+
   gem 'guard'
 
   gem 'guard-rspec', require: false
@@ -59,30 +61,31 @@ end
   gem 'guard-spork'
 
   gem 'brakeman', :require => false
+  
+end
 
-  gem 'devise'
+gem 'devise'
 
-  gem 'cancancan'
+gem 'cancancan'
 
-  gem 'ratyrate'
+gem 'ratyrate'
 
-  gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate', '~> 3.0.6'
 
-  gem 'will_paginate-bootstrap'
+gem 'will_paginate-bootstrap'
 
-  gem "factory_girl_rails", "~> 4.0"
+gem "factory_girl_rails", "~> 4.0"
 
-  gem "spork-rails"
+gem "spork-rails"
 
-  gem 'stripe'
+gem 'stripe'
 
-  gem 'jquery-turbolinks'
+gem 'jquery-turbolinks'
 
-  gem 'angularjs-rails'
+gem 'angularjs-rails'
 
-  gem 'dalli'
+gem 'dalli'
 
-  gem "redis-rails"
+gem "redis-rails"
 
-  gem 'newrelic_rpm'
-
+gem 'newrelic_rpm'
