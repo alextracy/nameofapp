@@ -1,17 +1,14 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '~> 5.0.0.rc1'
+gem 'pg'
 # gem 'therubyracer', platforms: :ruby
 group :production do
   gem 'rails_12factor'
-  gem 'pg'
 end
-# Use sqlite3 as the database for Active Record
-group :development, :test do
-  gem 'sqlite3'
-end
+
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.1'
 
@@ -21,7 +18,6 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -47,6 +43,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
+
 end
 
 group :development do
@@ -90,3 +87,5 @@ gem 'dalli'
 gem "redis-rails"
 
 gem 'newrelic_rpm'
+
+gem 'puma'

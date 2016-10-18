@@ -6,12 +6,14 @@ class OrdersController < ApplicationController
 	respond_to :json, :html
 
 	def index
-		@orders = Order.all.to_json(:include => [{:product => {:only => :name}}, {:user => {:only => :email}}])
+		@orders = Order.all.to_json(include: [
+			{product: {only: :name}}, {user: {:only => :email}}
+			])
 		respond_with @orders 
 	end
 
 	def show 
-		@order = Order.find(params[:id]).to_json(:include => [{:product => {:only => :name}}, {:user => {:only => :email}}])
+		@order = Order.find(params[:id]).to_json(include: [{product: {only: :name}}, {user: {only: :email}}])
 		respond_with @order
 	end 
 
@@ -29,7 +31,7 @@ class OrdersController < ApplicationController
 
     	respond_to do |format|
       		format.html { redirect_to orders_url }
-      		format.json { render :nothing => true, :status => :ok }
+      		format.json { render nothing: true, status: :ok }
 		#      format.json { render :nothing => true, :status => :not_found }
     	end
 	end

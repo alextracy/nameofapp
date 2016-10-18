@@ -1,17 +1,32 @@
 <div ng-controller="OrdersCtrl">
 	<h1 style="margin-bottom: 5%">Orders</h1>
 
-	<form style="text-align:center" class="form-inline" ng-submit="addOrder()">
-		<strong>Add order: </strong>
-		<select ng-model="newOrder.product_id" class="form-control">
-			<option value="" disabled selected>Select a product</option>
-			<option ng-repeat="product in products" value="{{product.id}}">
+	<form class="form-inline" ng-submit="addOrder()" style="text-align:center;">
+		<table style="margin-top: 2%" class="table table-hover">
+		<thead style="text-align:center">
+			<td><strong>Quanity: </strong></td>
+			<td><strong>Price: </strong></td>
+					<td><strong>Product </strong></td>
+		</thead>
+		<tr>
+		<td>
+			<input type="number" class="form-control" ng-model="newOrder.product_id" placeholder="#" style="width:50px;">
+		</td>
+		<td>
+			<input type="number" step="0,01" class="form-control" placeholder="Total" ng-model="newOrder.total" style="width:75px; ">
+		</td>
+		
+		<td>
+			<select ng-model="newOrder.product_id" class="form-control">
+				<option value="" disabled selected>Select a product</option>
+				<option ng-repeat="product in products" value="{{product.id}}">
 				{{product.name}}
-			</option>
-		</select>
-		<input type="number" step="0,01" class="form-control" placeholder="Total" ng-model="newOrder.total">
-		<input type="number" class="form-control" ng-model="newOrder.product_id">
-		<input type="submit" value="+" class="btn btn-success">
+				</option>
+			</select>
+		</td>
+		<td>
+			<input type="submit" value="+" class="btn btn-success">
+		</td>
 	</form>
 
 	<table style="margin-top: 2%" class="table table-hover">
@@ -34,7 +49,7 @@
 				{{order.product.name}}
 				<small ng-show= "order.id">
 					<br>
-					-{{order.user.email}}
+					{{order.user.email}}
 				</small>
 			</td>
 			<td>
