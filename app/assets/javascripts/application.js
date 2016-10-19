@@ -11,6 +11,7 @@
 // about supported directives.
 //
 
+//= require cable
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets

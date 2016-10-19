@@ -4,10 +4,8 @@ ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0.rc1'
 gem 'pg'
+
 # gem 'therubyracer', platforms: :ruby
-group :production do
-  gem 'rails_12factor'
-end
 
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.1'
@@ -48,9 +46,11 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'spring-watcher-listen', '~> 2.0.0'
 
   gem 'guard'
 
@@ -68,13 +68,13 @@ gem 'cancancan'
 
 gem 'ratyrate'
 
-gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate', '~> 3.1'
 
 gem 'will_paginate-bootstrap'
 
 gem "factory_girl_rails", "~> 4.0"
 
-gem "spork-rails"
+# gem "spork-rails"
 
 gem 'stripe'
 

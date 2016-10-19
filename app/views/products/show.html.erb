@@ -40,8 +40,10 @@
 
     <div class="well">
     		<%= render 'new_comment' %>
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
     		<h2 style="">Reviews:</h2>
     		<div id='product-reviews'>
+
 			<% @comments.each do |comment| %>
 				<hr>
 					<p>
