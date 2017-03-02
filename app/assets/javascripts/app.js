@@ -6,7 +6,7 @@ $(document).on('ready page:load', function(){
 
 app.factory('models', ['$resource', function($resource){
 	var orders_model = $resource("/orders/:id.json", {id: "@id" }); 
-	var products_model = $resource("/products/:id.json", {id: "@id"});
+	var products_model = $resource("/products/:id.json", {id: "@id" });
 	
 	var x = {
 		orders: orders_model,

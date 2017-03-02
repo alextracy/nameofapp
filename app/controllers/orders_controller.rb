@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
 	def index
 		@orders = Order.all.to_json(include: [
 			{product: {only: :name}}, {user: {:only => :email}}
-			])
+		])
 		respond_with @orders 
 	end
 
