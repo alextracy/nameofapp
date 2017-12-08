@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.4.0'
+ruby '2.4.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 gem 'pg'
@@ -71,8 +71,6 @@ gem 'ratyrate'
 gem 'will_paginate', '~> 3.1'
 
 gem 'will_paginate-bootstrap'
-
-gem "factory_girl_rails", "~> 4.0"
 
 # gem "spork-rails"
 
